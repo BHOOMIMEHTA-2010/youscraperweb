@@ -1,0 +1,6 @@
+{
+  "name": "YourScraper",
+  "description": "Turn Trash Into Treasure — Responsible e-waste collection, valuation, and circular-economy platform connecting sellers, bulk collectors, and organizations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
