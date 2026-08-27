@@ -1,0 +1,69 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$');
+    }
+
+    function isValidString(str, minLen, maxLen) {
+      return str is string && str.size() >= minLen && str.size() <= maxLen;
+    }
+
+    // 1. User Profiles (/users/{userId})
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId)
+        && request.resource.data.uid == userId;
+      allow delete: if false;
+    }
+
+    // 2. Seller Leads / Bookings (/seller_leads/{leadId})
+    match /seller_leads/{leadId} {
+      // Create validation: ensure valid phone/name/device type and honest payload
+      allow create: if request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.device_type is string
+        && request.resource.data.condition is string
+        && request.resource.data.city is string;
+
+      // Read authorization: only owner or matching verified email
+      allow read: if isAuthenticated() && (
+        resource.data.user_id == request.auth.uid ||
+        (resource.data.email != null && resource.data.email == request.auth.token.email)
+      );
+
+      // Prevent unauthorized modification or deletion from client side
+      allow update, delete: if false;
+    }
+
+    // 3. Collector Leads (/collector_leads/{leadId})
+    match /collector_leads/{leadId} {
+      allow create: if request.resource.data.name is string
+        && request.resource.data.business_name is string
+        && request.resource.data.city is string;
+      allow read, update, delete: if false;
+    }
+
+    // 4. College Leads (/college_leads/{leadId})
+    match /college_leads/{leadId} {
+      allow create: if request.resource.data.name is string
+        && request.resource.data.organization is string;
+      allow read, update, delete: if false;
+    }
+
+    // Catch-all denial
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

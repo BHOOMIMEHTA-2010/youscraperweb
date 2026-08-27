@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Truck, Recycle, ArrowRight } from 'lucide-react';
+import { Package, Truck, Recycle, ArrowRight } from 'lucide-react';
 
 export const SolutionSection: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -11,12 +11,12 @@ export const SolutionSection: React.FC = () => {
     {
       id: 'sell',
       tag: 'FOR INDIVIDUALS & BUSINESSES',
-      title: 'SELL',
-      heading: 'Turn unused electronics into value.',
+      title: 'SELL / RECYCLE',
+      heading: 'Turn unwanted materials into value.',
       description:
-        'Submit any retired device in any condition. We review the details, provide an honest manual valuation, and arrange free doorstep pickup.',
-      icon: Smartphone,
-      ctaText: 'Sell A Device',
+        'Submit any recyclable materials—plastic, paper, cardboard, glass, metal, electronics, or textiles—in any condition. We review the details, provide a transparent valuation, and arrange free doorstep pickup.',
+      icon: Package,
+      ctaText: 'Get Materials Valued',
       targetId: '#sellers',
       bgClass: 'bg-white',
       accentColor: 'text-[#1A5C3A]',
@@ -25,13 +25,13 @@ export const SolutionSection: React.FC = () => {
     },
     {
       id: 'collect',
-      tag: 'FOR SCRAP OPERATORS & VENDORS',
+      tag: 'FOR OPERATORS & VENDORS',
       title: 'COLLECT',
-      heading: 'Join a growing network of collectors and recyclers.',
+      heading: 'Connect with opportunities to collect recyclable materials.',
       description:
-        'Gain verified access to bulk electronic scrap supply streams. We are organizing the unorganized sector into a professional, profitable network.',
+        'Join a growing network of collectors, recyclers, refurbishers, and material recovery businesses. Gain verified access to steady supply streams across all recyclable categories.',
       icon: Truck,
-      ctaText: 'Join Bulk Network',
+      ctaText: 'Join Collector Network',
       targetId: '#collectors',
       bgClass: 'bg-[#1A5C3A] text-white',
       accentColor: 'text-[#D4A574]',
@@ -41,10 +41,10 @@ export const SolutionSection: React.FC = () => {
     {
       id: 'recycle',
       tag: 'FOR CAMPUSES & ORGANIZATIONS',
-      title: 'RECYCLE',
-      heading: 'Help move electronics toward responsible reuse and recycling.',
+      title: 'RECOVER',
+      heading: 'Help materials move back into the circular economy.',
       description:
-        'Partner with YourScraper to run institutional e-waste drives, secure enterprise asset disposal, and prepare for future ESG compliance.',
+        'Partner with YourScraper to run institutional collection drives, establish effective waste segregation, and ensure all recoverable materials reach certified circular recyclers.',
       icon: Recycle,
       ctaText: 'Explore Campus Drives',
       targetId: '#colleges',
@@ -65,10 +65,10 @@ export const SolutionSection: React.FC = () => {
             The YourScraper Ecosystem
           </div>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-[#17201B] tracking-tight mb-5">
-            Give your electronics a second life.
+            Connecting every stakeholder in material recovery.
           </h2>
           <p className="text-lg text-[#56685E] font-normal leading-relaxed">
-            YourScraper is building a simpler way to connect people and organizations with collectors, recyclers and circular-economy partners.
+            YourScraper is building a modern platform that connects individuals, commercial entities, collectors, and certified recyclers for every recyclable material category.
           </p>
         </div>
 

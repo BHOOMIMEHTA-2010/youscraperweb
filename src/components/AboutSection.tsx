@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, Eye, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { OfficialLogoEmblem } from './Logo';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -16,15 +17,15 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[#17201B] tracking-tight leading-[1.15] mb-6">
-              Building a smarter way to deal with e-waste.
+              Building a smarter way to recycle everything and anything.
             </h2>
 
             <p className="text-base sm:text-lg text-[#56685E] font-normal leading-relaxed mb-6">
-              YourScraper was founded with a straightforward conviction: electronic scrap should never be treated as useless garbage. We are engineering a platform that bridges households and organizations directly with responsible scrap collectors, refurbishers, and certified recyclers.
+              YourScraper was founded with a straightforward conviction: no recyclable material or scrap should ever be treated as useless garbage. We are engineering a platform that bridges households and organizations directly with responsible scrap collectors, recyclers, and circular economy partners across electronics, metals, plastics, paper, and industrial waste.
             </p>
 
             <p className="text-sm text-[#56685E] leading-relaxed mb-8">
-              By replacing informal, opaque scrap disposal with transparent valuations, free doorstep collection, and organized downstream circular pathways, we aim to make responsible e-waste handling the easiest choice for everyone.
+              By replacing informal, opaque scrap disposal with transparent valuations, free doorstep collection, and organized downstream circular pathways, we make responsible multi-material recycling the easiest choice for everyone.
             </p>
 
             {/* Core Commitments List */}
@@ -34,7 +35,7 @@ export const AboutSection: React.FC = () => {
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-sm font-medium text-[#17201B]">
-                  Prioritizing circular reuse before material shredding
+                  Prioritizing circular reuse and material recovery before disposal
                 </span>
               </div>
 
@@ -61,27 +62,27 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Visual Philosophy Card */}
           <div className="lg:col-span-6">
             <div className="bg-[#F7F5EF] rounded-3xl p-8 sm:p-10 border border-[#1A5C3A]/15 shadow-md relative">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#1A5C3A] text-[#D4A574] flex items-center justify-center">
-                  <Eye className="w-6 h-6" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <OfficialLogoEmblem size={56} className="shadow-md rounded-full" />
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-xl text-[#17201B]">
                     Our 5 Guiding Principles
                   </h3>
-                  <p className="text-xs text-[#56685E]">How we approach the circular transition</p>
+                  <p className="text-xs text-[#56685E]">How YourScraper approaches the circular transition</p>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="p-4 rounded-2xl bg-white border border-gray-200/80">
                   <h4 className="font-semibold text-sm text-[#17201B] mb-1">1. Circular Economy First</h4>
-                  <p className="text-xs text-[#56685E]">Extending useful lifespan before breakdown and extraction.</p>
+                  <p className="text-xs text-[#56685E]">Extending useful material lifespan before processing and breakdown.</p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-gray-200/80">
                   <h4 className="font-semibold text-sm text-[#17201B] mb-1">2. Transparent Valuation</h4>
-                  <p className="text-xs text-[#56685E]">Honest review based on salvage reality, not gimmicky algorithms.</p>
+                  <p className="text-xs text-[#56685E]">Honest review based on scrap market reality, not gimmicky algorithms.</p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-gray-200/80">
@@ -91,12 +92,12 @@ export const AboutSection: React.FC = () => {
 
                 <div className="p-4 rounded-2xl bg-white border border-gray-200/80">
                   <h4 className="font-semibold text-sm text-[#17201B] mb-1">4. Radical Accessibility</h4>
-                  <p className="text-xs text-[#56685E]">Free doorstep pickup so zero electronics end up in trash cans.</p>
+                  <p className="text-xs text-[#56685E]">Free doorstep pickup so zero recyclable materials end up in trash cans.</p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-white border border-gray-200/80">
                   <h4 className="font-semibold text-sm text-[#17201B] mb-1">5. Responsible Environmental Stewardship</h4>
-                  <p className="text-xs text-[#56685E]">Zero toxic dumping through strict vetted downstream handling.</p>
+                  <p className="text-xs text-[#56685E]">Zero toxic dumping through strict vetted downstream recycling partners.</p>
                 </div>
               </div>
             </div>

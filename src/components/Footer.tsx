@@ -32,13 +32,13 @@ export const Footer: React.FC = () => {
             </p>
 
             <p className="text-sm text-emerald-100/70 max-w-sm leading-relaxed">
-              YourScraper is India's dedicated e-waste platform connecting individuals, businesses, and institutions with responsible scrap collectors, certified recyclers, and future circular-economy opportunities.
+              YourScraper is India's multi-material recycling platform connecting individuals, businesses, and institutions with responsible scrap collectors, certified recyclers, and circular-economy opportunities for everything and anything that can be recycled.
             </p>
 
             <div className="pt-2 text-xs text-emerald-100/60 space-y-1.5">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[#D4A574]" />
-                <span>Pan-India E-Waste Collection & Logistics Network</span>
+                <span>Pan-India Scrap & Recycling Logistics Network</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-[#D4A574]" />
@@ -143,14 +143,14 @@ export const Footer: React.FC = () => {
               Get Started
             </h4>
             <p className="text-xs text-emerald-100/70 mb-4 leading-relaxed">
-              Have an old phone, laptop, or batch of electronics? Submit your details in 60 seconds.
+              Have scrap metals, paper, plastics, appliances, or old electronics? Submit your details in 60 seconds.
             </p>
             <button
               onClick={() => scrollTo('#sellers')}
               id="footer-valuation-cta"
               className="w-full py-3 px-4 rounded-full bg-[#D4A574] text-[#17201B] font-bold text-xs hover:bg-[#c6945f] transition-all shadow-md cursor-pointer"
             >
-              Sell Your Device Today
+              Get Materials Valued Today
             </button>
           </div>
 
@@ -158,7 +158,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Legal & Copyright Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-100/60">
-          <p>© {new Date().getFullYear()} YourScraper. All rights reserved. Building a sustainable future.</p>
+          <p>© {new Date().getFullYear()} YourScraper. All rights reserved. Building a sustainable, zero-landfill future.</p>
 
           <div className="flex items-center gap-6">
             <button
@@ -203,13 +203,13 @@ export const Footer: React.FC = () => {
                 </h3>
                 <div className="text-sm text-emerald-100/80 space-y-3 leading-relaxed">
                   <p>
-                    <strong>YourScraper</strong> is committed to respecting your privacy. When you submit contact details, device information, or organization requirements through our lead forms, we use this information strictly to assess equipment valuation, coordinate free collection, and communicate with you about our services.
+                    <strong>YourScraper</strong> is committed to respecting your privacy. When you submit contact details, scrap item details, or organization requirements through our lead forms, we use this information strictly to assess equipment and material valuation, coordinate free collection, and communicate with you about our recycling services.
                   </p>
                   <p>
-                    <strong>Data Usage:</strong> We do not sell, rent, or lease your personal contact information to third-party advertisers. Information is only shared with authorized logistics handlers and verified processing partners directly involved in your pickup.
+                    <strong>Data Usage:</strong> We do not sell, rent, or lease your personal contact information to third-party advertisers. Information is only shared with authorized logistics handlers and verified recycling partners directly involved in your pickup.
                   </p>
                   <p>
-                    <strong>Device Data Security:</strong> We strongly advise all sellers to wipe personal data, sign out of cloud accounts, and perform a factory reset prior to device collection.
+                    <strong>Electronic Device Data Security:</strong> For electronic devices and computer hardware, we advise all sellers to wipe personal data and perform factory resets prior to collection.
                   </p>
                 </div>
               </div>
@@ -220,10 +220,10 @@ export const Footer: React.FC = () => {
                 </h3>
                 <div className="text-sm text-emerald-100/80 space-y-3 leading-relaxed">
                   <p>
-                    <strong>Service Scope:</strong> YourScraper provides lead generation, honest manual device valuation appraisal, and pickup coordination for electronic scrap and retired hardware.
+                    <strong>Service Scope:</strong> YourScraper provides scrap lead generation, honest manual valuation appraisal across all recyclable material streams, and doorstep pickup coordination.
                   </p>
                   <p>
-                    <strong>Valuation Process:</strong> Valuations provided via phone or email are provisional estimates based on the condition reported by the user and confirmed upon physical inspection during collection.
+                    <strong>Valuation Process:</strong> Valuations provided via phone or email are provisional estimates based on the condition and quantity reported by the user and confirmed upon physical inspection during collection.
                   </p>
                   <p>
                     <strong>Future Features:</strong> Automated AI valuation, live marketplace trading, and online payment gateways are upcoming roadmap items marked as COMING SOON and are not currently active contractual terms.

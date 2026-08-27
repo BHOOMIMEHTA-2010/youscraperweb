@@ -7,39 +7,47 @@ export const FAQSection: React.FC = () => {
   const faqs = [
     {
       q: 'What is YourScraper?',
-      a: 'YourScraper is a modern circular electronics platform that connects individuals, businesses, and educational institutions with responsible scrap collectors, recyclers, and refurbishers. Our goal is to ensure retired electronics are either reused or recycled responsibly rather than ending up in landfills.',
+      a: 'YourScraper is a modern circular waste & scrap recycling platform that connects individuals, businesses, and educational institutions with responsible scrap collectors, certified recyclers, and refurbishers for everything and anything that can be recycled—including e-waste, scrap metals, plastics, paper, home appliances, automotive scrap, and industrial waste.',
     },
     {
-      q: 'What devices can I submit?',
-      a: 'You can submit virtually any consumer or enterprise electronic hardware, including smartphones, laptops, tablets, desktops, monitors, gaming consoles, smartwatches, wearables, printed circuit boards, and assorted cables/chargers—in working, damaged, or non-working scrap condition.',
+      q: 'What materials can I submit?',
+      a: 'You can submit virtually any recyclable material, scrap, or surplus item. This includes plastic, paper, cardboard, glass, scrap metals (iron, copper, aluminum, brass), electronics / e-waste, textiles, furniture, household recyclables, and bulk commercial scrap—in usable, damaged, or complete scrap condition.',
+    },
+    {
+      q: 'Does YourScraper accept electronics and e-waste?',
+      a: 'Yes! Electronics and e-waste—including smartphones, laptops, PCs, tablets, monitors, chargers, circuit boards, and appliances—are supported as one of our many recyclable material categories.',
+    },
+    {
+      q: 'Can I submit plastic, paper, metal, or glass?',
+      a: 'Absolutely. Plastic bottles, containers, packaging, cardboard boxes, newspapers, scrap iron, aluminum cans, copper wire, glass bottles, and jars can all be submitted for valuation and scheduled doorstep collection.',
     },
     {
       q: 'How does valuation work?',
-      a: 'In this current phase, our valuation process is handled manually by certified electronics appraisal specialists. Once you submit your device type, brand, and condition details through our form, our team evaluates salvage value, recoverable components, and current market demand, then gets back to you with an honest price quote.',
+      a: 'Our valuation process is handled directly by experienced appraisal specialists. Once you submit your item category, approximate quantity/weight, and condition details through our form, our team evaluates salvage value, recoverable materials, and current market scrap benchmark prices, then gets back to you with an honest, transparent quote.',
     },
     {
-      q: 'Is pickup available?',
-      a: 'Yes! We coordinate free doorstep collection for accepted devices. Once we agree on the valuation with you, our logistics team schedules a pickup window at your home, office, or campus address.',
+      q: 'Is pickup available for all waste types?',
+      a: 'Yes! We coordinate free doorstep collection for accepted recyclable items and scrap batches. Once we agree on the valuation with you, our logistics team schedules a pickup window directly at your home, warehouse, office, or campus address.',
     },
     {
       q: 'When will I receive a price?',
-      a: 'Our appraisal team typically reviews submissions within 24 to 48 business hours. You will receive a direct message or call with the evaluated price and details on scheduling your pickup.',
+      a: 'Our appraisal team typically reviews submissions within 24 to 48 business hours. You will receive a direct message or call with the evaluated price and details on scheduling your doorstep pickup.',
     },
     {
-      q: 'Do I get paid instantly?',
-      a: 'Currently, payout occurs directly upon physical verification and pickup by our authorized team representative via direct bank transfer or UPI. (Instant automated online in-app payments are part of our upcoming roadmap).',
+      q: 'Do I get paid on pickup?',
+      a: 'Yes! Payout occurs directly upon physical verification and pickup by our authorized team representative via direct bank transfer, UPI, or cash as preferred.',
     },
     {
-      q: 'How can collectors join?',
-      a: 'Scrap collectors, bulk aggregators, refurbishers, and certified recyclers can join our bulk network by submitting the Collector Interest Form on this page. We connect members with aggregated electronic scrap streams as we expand operations in your region.',
+      q: 'How can collectors and scrap dealers join?',
+      a: 'Scrap collectors, bulk aggregators, refurbishers, and certified recyclers across all material streams (metals, paper, plastic, e-waste, industrial) can join our bulk network by submitting the Collector Interest Form on this page. We connect members with aggregated scrap streams as we expand operations.',
     },
     {
       q: 'Can colleges and organizations use YourScraper?',
-      a: 'Yes! We partner with universities, schools, technology parks, and corporate enterprises to organize dedicated e-waste collection drives and responsible asset disposal. You can schedule an institutional consultation using the form on this page.',
+      a: 'Yes! We partner with universities, schools, technology parks, and corporate enterprises to organize dedicated recycling drives and responsible asset disposal across all recyclable categories. You can schedule an institutional consultation using the form on this page.',
     },
     {
-      q: 'Is the marketplace available yet?',
-      a: 'No. The self-serve B2B collector marketplace, automated photo-based AI assessment, and live tracking dashboard are currently under active development and marked as COMING SOON. Today, YourScraper operates as a direct lead-generation and manual valuation service.',
+      q: 'Is the online marketplace available yet?',
+      a: 'The self-serve B2B collector marketplace, automated photo-based AI assessment, and live tracking dashboard are currently under active development and marked as COMING SOON. Today, YourScraper operates as a direct lead-generation, multi-material manual valuation, and doorstep collection service.',
     },
   ];
 

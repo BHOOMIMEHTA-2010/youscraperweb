@@ -125,7 +125,7 @@ export const CollegeSection: React.FC = () => {
               </h2>
 
               <p className="text-[#56685E] text-base sm:text-lg leading-relaxed mb-8">
-                YourScraper aims to help universities, tech parks, and corporate enterprises organize dedicated e-waste collection drives with certified, responsible downstream recyclers.
+                YourScraper helps universities, tech parks, and corporate enterprises organize dedicated recycling and scrap collection drives—covering e-waste, paper, plastics, scrap metals, and surplus inventory—with certified downstream recyclers.
               </p>
             </div>
 
@@ -138,10 +138,10 @@ export const CollegeSection: React.FC = () => {
                   <Calendar className="w-5 h-5" />
                 </div>
                 <h4 className="font-heading font-semibold text-sm text-[#17201B] mb-1">
-                  Organized E-Waste Drives
+                  Organized Recycling Drives
                 </h4>
                 <p className="text-xs text-[#56685E] leading-relaxed">
-                  Turnkey bins, awareness collateral, and scheduled bulk pickup from your premises.
+                  Turnkey multi-waste bins, awareness collateral, and scheduled bulk pickup from your premises.
                 </p>
               </div>
 
@@ -154,7 +154,7 @@ export const CollegeSection: React.FC = () => {
                   Responsible Recycling Partnerships
                 </h4>
                 <p className="text-xs text-[#56685E] leading-relaxed">
-                  Vetted authorized processing facilities guaranteeing zero landfill diversion.
+                  Vetted authorized processing facilities guaranteeing zero landfill diversion across all material streams.
                 </p>
               </div>
 
@@ -210,7 +210,7 @@ export const CollegeSection: React.FC = () => {
                   Thanks! We’ll be in touch.
                 </h3>
                 <p className="text-[#56685E] text-base leading-relaxed mb-8">
-                  Our institutional coordinator will connect with {formData.organization || 'your organization'} within 24–48 hours to schedule a campus e-waste strategy call.
+                  Our institutional coordinator will connect with {formData.organization || 'your organization'} within 24–48 hours to schedule a campus recycling & scrap strategy call.
                 </p>
 
                 <button
@@ -233,7 +233,7 @@ export const CollegeSection: React.FC = () => {
                     Schedule a Consultation
                   </h3>
                   <p className="text-xs text-[#56685E] mt-1">
-                    Plan an e-waste drive for your college campus, corporate facility, or community
+                    Plan a recycling drive for your college campus, corporate facility, or community
                   </p>
                 </div>
 

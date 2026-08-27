@@ -1,4 +1,16 @@
 export type DeviceType =
+  | 'Plastic'
+  | 'Paper'
+  | 'Cardboard'
+  | 'Glass'
+  | 'Metal'
+  | 'E-waste / Electronics'
+  | 'Textiles'
+  | 'Furniture'
+  | 'Household Recyclables'
+  | 'Commercial & Industrial'
+  | 'Other'
+  // Backward compatibility types
   | 'Smartphone'
   | 'Laptop'
   | 'Tablet'
@@ -6,7 +18,15 @@ export type DeviceType =
   | 'Monitor'
   | 'Gaming Console'
   | 'Wearable'
-  | 'Other';
+  | 'Home Appliance'
+  | 'Scrap Metal & Iron'
+  | 'Plastic & Packaging'
+  | 'Paper & Cardboard'
+  | 'Vehicle & Auto Scrap'
+  | 'Batteries & Inverters'
+  | 'Industrial Scrap';
+
+export type MaterialType = DeviceType;
 
 export type DeviceCondition =
   | 'Working'

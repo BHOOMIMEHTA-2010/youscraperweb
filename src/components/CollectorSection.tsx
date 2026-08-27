@@ -140,20 +140,32 @@ export const CollectorSection: React.FC = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#D4A574] text-xs font-semibold uppercase tracking-wider mb-6 border border-white/10">
                 <Truck className="w-3.5 h-3.5" />
-                B2B Bulk Scrap Network
+                B2B Material Recovery & Recycling Network
               </div>
 
               <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15] mb-6">
-                Are you a scrap collector or recycler?
+                Are you a collector or recycler?
               </h2>
 
               <h3 className="font-heading font-medium text-xl text-[#D4A574] mb-6">
-                Join our growing bulk network.
+                Join our growing network of collectors, recyclers, refurbishers, and material recovery businesses.
               </h3>
 
-              <p className="text-emerald-100/80 text-base leading-relaxed mb-8">
-                YourScraper is building a network connecting collectors, recyclers, refurbishers and bulk buyers with future opportunities to source electronic scrap.
+              <p className="text-emerald-100/80 text-base leading-relaxed mb-6">
+                YourScraper connects collectors, material recovery facilities, refurbishers, and bulk buyers with continuous sourcing opportunities across all major recyclable streams.
               </p>
+
+              {/* Supported Materials Chips */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {['Plastic', 'Paper', 'Cardboard', 'Glass', 'Metal', 'E-waste', 'Textiles', 'Other'].map((mat) => (
+                  <span
+                    key={mat}
+                    className="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-medium text-white/90"
+                  >
+                    {mat}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {/* Feature Highlights */}
@@ -165,7 +177,7 @@ export const CollectorSection: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-sm text-white">Aggregated Supply Inflow</h4>
                   <p className="text-xs text-emerald-100/70 mt-0.5">
-                    Access steady, segregated electronic scrap streams directly from households and corporate campuses.
+                    Access steady, segregated scrap streams directly from households, institutions, and corporate facilities.
                   </p>
                 </div>
               </div>
@@ -177,7 +189,7 @@ export const CollectorSection: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-sm text-white">Direct Industry Connection</h4>
                   <p className="text-xs text-emerald-100/70 mt-0.5">
-                    Connect with vetted refurbishers and certified metal smelters across regional hubs.
+                    Connect with vetted mills, smelters, refurbishers, and certified recyclers across regional hubs.
                   </p>
                 </div>
               </div>
@@ -187,9 +199,9 @@ export const CollectorSection: React.FC = () => {
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm text-white">Organized E-Waste Economy</h4>
+                  <h4 className="font-semibold text-sm text-white">Organized Circular Economy</h4>
                   <p className="text-xs text-emerald-100/70 mt-0.5">
-                    Upgrade from informal scrap trading to a verified, tech-enabled circular network.
+                    Upgrade from fragmented informal scrap trading to a verified, tech-enabled multi-material circular network.
                   </p>
                 </div>
               </div>

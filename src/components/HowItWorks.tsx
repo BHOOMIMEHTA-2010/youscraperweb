@@ -5,23 +5,23 @@ export const HowItWorks: React.FC = () => {
   const steps = [
     {
       number: '01',
-      title: 'TELL US WHAT YOU HAVE',
-      desc: 'Select your device type, brand, and honest condition (working, damaged, or scrap).',
-      detail: 'Smartphones, laptops, monitors, appliances & more',
+      title: 'SELECT MATERIAL / ITEM',
+      desc: 'Pick your category: plastic, paper, cardboard, glass, metal, e-waste, textiles, furniture, household, or other recyclables.',
+      detail: 'Multi-category material support',
       icon: CheckCircle2,
     },
     {
       number: '02',
-      title: 'SHARE YOUR DETAILS',
-      desc: 'Provide your name, phone number, and city so our logistics and appraisal team can coordinate.',
-      detail: 'Safe, private, and zero spam guarantee',
+      title: 'CONDITION & QUANTITY',
+      desc: 'Specify the condition and approximate quantity or details so we can assess the recoverable material value.',
+      detail: 'Honest evaluation — usable or scrap',
       icon: UserCheck,
     },
     {
       number: '03',
-      title: "WE'LL VALUE IT",
-      desc: 'Our specialists review your submission and contact you with a fair valuation and free pickup schedule.',
-      detail: 'Real human assessment — no automated fake estimates',
+      title: "VALUATION & FREE PICKUP",
+      desc: 'Our specialists review your submission, provide a transparent valuation, and schedule a convenient free doorstep collection.',
+      detail: 'Human assessment — no fake pricing gimmicks',
       icon: ShieldCheck,
     },
   ];
@@ -45,7 +45,7 @@ export const HowItWorks: React.FC = () => {
             How YourScraper Works
           </h2>
           <p className="text-base sm:text-lg text-[#56685E] font-normal leading-relaxed">
-            Transparent, human-reviewed device valuations and zero-hassle pickup.
+            Transparent, human-reviewed valuations and zero-hassle free doorstep pickup for all recyclables.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export const HowItWorks: React.FC = () => {
                 Transparent & Honest Valuation
               </h4>
               <p className="text-xs sm:text-sm text-[#56685E] max-w-2xl">
-                We don't use misleading algorithms or promise inflated prices that get renegotiated at your door. Every valuation is manually reviewed by certified electronics specialists.
+                We don't use misleading algorithms or promise inflated prices that get renegotiated at your door. Every valuation is manually reviewed by certified scrap and recycling appraisal specialists.
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export const HowItWorks: React.FC = () => {
             id="how-it-works-cta"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1A5C3A] hover:bg-[#124229] text-white font-semibold text-sm transition-all duration-200 shadow-sm flex-shrink-0 cursor-pointer"
           >
-            <span>Get Your Device Valued</span>
+            <span>Get Your Items Valued</span>
             <ArrowRight className="w-4 h-4 text-[#D4A574]" />
           </button>
         </div>

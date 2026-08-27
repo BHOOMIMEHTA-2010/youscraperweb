@@ -15,43 +15,43 @@ export const ComingSoonRoadmap: React.FC = () => {
   const roadmapItems = [
     {
       icon: Sparkles,
-      title: 'AI-Assisted Valuation',
-      desc: 'Machine learning model predicting instantaneous market salvage rates based on historical component teardowns.',
+      title: 'AI-Assisted Material Valuation',
+      desc: 'Predictive pricing models estimating market salvage value across plastics, paper, metals, electronics, and bulk streams.',
     },
     {
       icon: Camera,
-      title: 'Photo-Based Device Assessment',
-      desc: 'Computer vision diagnostics to grade screen damage, chassis wear, and port conditions from simple phone photos.',
+      title: 'Photo-Based Material ID',
+      desc: 'Computer vision to identify polymer grades, paper types, metal purities, electronic components, and condition directly from photos.',
     },
     {
       icon: Store,
-      title: 'Collector Marketplace',
-      desc: 'Live B2B exchange connecting localized scrap hubs with certified high-yield precious metal smelters.',
+      title: 'Recycling Marketplace',
+      desc: 'Live B2B exchange connecting local collectors with certified mills, smelters, recyclers, and material recovery facilities.',
     },
     {
       icon: Boxes,
-      title: 'Bulk Sourcing & Purchasing',
-      desc: 'Consolidated pallets of categorized e-waste available for licensed refurbishers and battery recyclers.',
+      title: 'Bulk Material Collection',
+      desc: 'Consolidated freight and truckload scheduling for high-volume commercial and institutional material scrap.',
     },
     {
       icon: Navigation,
       title: 'Real-Time Pickup Tracking',
-      desc: 'Live GPS navigation and route status for doorstep scrap dispatch and institutional bin collections.',
+      desc: 'Live GPS status and route updates for doorstep pickups and scheduled organizational bin collections.',
     },
     {
       icon: CreditCard,
       title: 'Instant Online Payouts',
-      desc: 'Automated direct UPI & bank settlement immediately upon on-site technician inspection and handover.',
+      desc: 'Automated direct UPI & bank transfers immediately upon on-site verification and material weigh-in.',
     },
     {
       icon: BarChart,
       title: 'Circular Impact Dashboard',
-      desc: 'Interactive visualizer measuring materials diverted from landfills, embodied energy saved, and device lifespans.',
+      desc: 'Interactive visualizer measuring materials diverted from landfills, energy saved, and net carbon offset.',
     },
     {
       icon: FileCheck,
-      title: 'ESG & Regulatory Reporting',
-      desc: 'Automated digital e-waste disposal certificates compliant with governmental environmental compliance norms.',
+      title: 'ESG & Compliance Reporting',
+      desc: 'Automated digital recycling certificates and audited material recovery metrics for corporate governance.',
     },
   ];
 
@@ -69,7 +69,7 @@ export const ComingSoonRoadmap: React.FC = () => {
             What’s next for YourScraper?
           </h2>
           <p className="text-base sm:text-lg text-[#56685E] font-normal leading-relaxed">
-            We are actively architecting the technological infrastructure for India's modern circular electronics economy.
+            We are actively architecting the technological infrastructure for India's comprehensive multi-material circular recycling economy.
           </p>
         </div>
 

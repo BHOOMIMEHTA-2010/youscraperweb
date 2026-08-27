@@ -25,12 +25,12 @@ export const FinalCTA: React.FC = () => {
         </div>
 
         <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight mb-6 leading-tight">
-          Ready to give your old electronics <br className="hidden sm:inline" />
-          <span className="text-[#D4A574]">a new purpose?</span>
+          Ready to give your scrap & waste <br className="hidden sm:inline" />
+          <span className="text-[#D4A574]">a valuable new purpose?</span>
         </h2>
 
         <p className="text-base sm:text-xl text-emerald-100/90 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
-          Whether you have a single retired phone or an enterprise campus full of IT assets, YourScraper ensures honest valuation and responsible circular recycling.
+          Whether you have a single household appliance, old electronics, scrap metals, plastics, paper, or an industrial facility with surplus inventory, YourScraper ensures honest valuation and responsible circular recycling.
         </p>
 
         {/* Dual CTA Buttons */}
@@ -40,7 +40,7 @@ export const FinalCTA: React.FC = () => {
             id="final-sell-cta"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#D4A574] hover:bg-[#c6945f] text-[#17201B] font-bold text-base transition-all duration-200 shadow-xl hover:shadow-2xl hover:scale-[1.02] cursor-pointer"
           >
-            <span>Sell Your Device</span>
+            <span>Sell Your Scrap</span>
             <ArrowRight className="w-5 h-5" />
           </button>
 

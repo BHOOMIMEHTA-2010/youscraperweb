@@ -1,4 +1,5 @@
 import React from 'react';
+import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { TrustStrip } from './components/TrustStrip';
@@ -14,57 +15,65 @@ import { AboutSection } from './components/AboutSection';
 import { FAQSection } from './components/FAQSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
+import { AuthModal } from './components/AuthModal';
+import { UserBookingsModal } from './components/UserBookingsModal';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-[#17201B] flex flex-col selection:bg-[#D4A574]/30 selection:text-[#1A5C3A]">
-      {/* 1. Sticky Navigation */}
-      <Navbar />
+    <AuthProvider>
+      <div className="min-h-screen bg-white text-[#17201B] flex flex-col selection:bg-[#D4A574]/30 selection:text-[#1A5C3A]">
+        {/* 1. Sticky Navigation with User Auth & Booking Triggers */}
+        <Navbar />
 
-      {/* Main Content Flow */}
-      <main className="flex-grow">
-        {/* 2. Hero Section with 3D Circular Ecosystem */}
-        <HeroSection />
+        {/* Main Content Flow */}
+        <main className="flex-grow">
+          {/* 2. Hero Section */}
+          <HeroSection />
 
-        {/* 3. Value & Trust Strip */}
-        <TrustStrip />
+          {/* 3. Value & Trust Strip */}
+          <TrustStrip />
 
-        {/* 4. Problem Definition (Editorial Layout) */}
-        <ProblemSection />
+          {/* 4. Problem Definition */}
+          <ProblemSection />
 
-        {/* 5. Solution (Sell, Collect, Recycle Pillars) */}
-        <SolutionSection />
+          {/* 5. Solution Pillars */}
+          <SolutionSection />
 
-        {/* 6. How It Works (3-Step Honest Valuation Flow) */}
-        <HowItWorks />
+          {/* 6. How It Works */}
+          <HowItWorks />
 
-        {/* 7. Seller Lead Generation Form */}
-        <SellerLeadForm />
+          {/* 7. Seller Lead / Booking Form */}
+          <SellerLeadForm />
 
-        {/* 8. Collector & Recycler Network Section */}
-        <CollectorSection />
+          {/* 8. Collector & Recycler Network */}
+          <CollectorSection />
 
-        {/* 9. College / Organization B2B Section */}
-        <CollegeSection />
+          {/* 9. College / Organization B2B Section */}
+          <CollegeSection />
 
-        {/* 10. Coming Soon Roadmap (Future Tech) */}
-        <ComingSoonRoadmap />
+          {/* 10. Coming Soon Roadmap */}
+          <ComingSoonRoadmap />
 
-        {/* 11. Circular Impact & Materials Storytelling */}
-        <ImpactSection />
+          {/* 11. Circular Impact & Materials */}
+          <ImpactSection />
 
-        {/* 12. About YourScraper Mission */}
-        <AboutSection />
+          {/* 12. About YourScraper Mission */}
+          <AboutSection />
 
-        {/* 13. FAQ Accordion */}
-        <FAQSection />
+          {/* 13. FAQ Accordion */}
+          <FAQSection />
 
-        {/* 14. Final High-Impact Conversion CTA */}
-        <FinalCTA />
-      </main>
+          {/* 14. Final Conversion CTA */}
+          <FinalCTA />
+        </main>
 
-      {/* 15. Premium Dark Green Footer */}
-      <Footer />
-    </div>
+        {/* 15. Footer */}
+        <Footer />
+
+        {/* Dynamic Modals */}
+        <AuthModal />
+        <UserBookingsModal />
+      </div>
+    </AuthProvider>
   );
 }

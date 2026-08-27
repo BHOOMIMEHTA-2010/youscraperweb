@@ -2,37 +2,32 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import crypto from 'crypto';
 import { createServer as createViteServer } from 'vite';
-import { createClient } from '@supabase/supabase-js';
 import { sellerLeadSchema, collectorLeadSchema, collegeLeadSchema } from './src/lib/validation';
+import {
+  saveSellerLeadToFirestore,
+  saveCollectorLeadToFirestore,
+  saveCollegeLeadToFirestore,
+} from './src/lib/serverFirebase';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 
-// In-memory fallback database for preview/offline mode
+// In-memory fallback
 const inMemoryStore = {
   sellerLeads: [] as Array<any>,
   collectorLeads: [] as Array<any>,
   collegeLeads: [] as Array<any>,
 };
 
-// Supabase helper
-function getDbClient() {
-  const url = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (url && key && !url.includes('your-project')) {
-    return createClient(url, key);
-  }
-  return null;
-}
-
 // Health endpoint
 app.get('/api/health', (_req: Request, res: Response) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    supabaseConfigured: !!getDbClient(),
+    firebaseConfigured: true,
+    firebaseProject: 'yourscraper-dccec',
   });
 });
 
@@ -51,7 +46,6 @@ app.post('/api/seller-leads', async (req: Request, res: Response): Promise<void>
 
     const { website_honeypot, ...validData } = result.data;
     if (website_honeypot && website_honeypot.length > 0) {
-      // Spam honeypot triggered
       res.status(200).json({
         success: true,
         message: "Thanks! We've received your details. We'll review your information and get back to you.",
@@ -59,8 +53,11 @@ app.post('/api/seller-leads', async (req: Request, res: Response): Promise<void>
       return;
     }
 
-    const leadRecord = {
-      id: crypto.randomUUID(),
+    let recordId: string = crypto.randomUUID();
+
+    const leadRecord: Record<string, any> = {
+      id: recordId,
+      user_id: validData.user_id || null,
       name: validData.name,
       email: validData.email,
       phone: validData.phone,
@@ -72,21 +69,19 @@ app.post('/api/seller-leads', async (req: Request, res: Response): Promise<void>
       created_at: new Date().toISOString(),
     };
 
-    const supabase = getDbClient();
-    if (supabase) {
-      const { error } = await supabase.from('seller_leads').insert([leadRecord]);
-      if (error) {
-        console.warn('Supabase insert warning, falling back to memory store:', error.message);
-        inMemoryStore.sellerLeads.push(leadRecord);
-      }
-    } else {
+    try {
+      const docId = await saveSellerLeadToFirestore(leadRecord);
+      recordId = docId;
+      leadRecord.id = docId;
+    } catch (dbErr: any) {
+      console.warn('Firestore write notice (using fallback):', dbErr?.message);
       inMemoryStore.sellerLeads.push(leadRecord);
     }
 
     res.status(201).json({
       success: true,
       message: "Thanks! We've received your details. We'll review your information and get back to you.",
-      data: { id: leadRecord.id },
+      data: { id: recordId },
     });
   } catch (err: any) {
     console.error('Error in /api/seller-leads:', err);
@@ -119,8 +114,10 @@ app.post('/api/collector-leads', async (req: Request, res: Response): Promise<vo
       return;
     }
 
-    const leadRecord = {
-      id: crypto.randomUUID(),
+    let recordId: string = crypto.randomUUID();
+
+    const leadRecord: Record<string, any> = {
+      id: recordId,
       name: validData.name,
       business_name: validData.business_name,
       email: validData.email,
@@ -132,21 +129,19 @@ app.post('/api/collector-leads', async (req: Request, res: Response): Promise<vo
       created_at: new Date().toISOString(),
     };
 
-    const supabase = getDbClient();
-    if (supabase) {
-      const { error } = await supabase.from('collector_leads').insert([leadRecord]);
-      if (error) {
-        console.warn('Supabase insert warning, falling back to memory store:', error.message);
-        inMemoryStore.collectorLeads.push(leadRecord);
-      }
-    } else {
+    try {
+      const docId = await saveCollectorLeadToFirestore(leadRecord);
+      recordId = docId;
+      leadRecord.id = docId;
+    } catch (dbErr: any) {
+      console.warn('Firestore write notice (using fallback):', dbErr?.message);
       inMemoryStore.collectorLeads.push(leadRecord);
     }
 
     res.status(201).json({
       success: true,
       message: "You're on the list. We'll contact you as the YourScraper network grows.",
-      data: { id: leadRecord.id },
+      data: { id: recordId },
     });
   } catch (err: any) {
     console.error('Error in /api/collector-leads:', err);
@@ -179,8 +174,10 @@ app.post('/api/college-leads', async (req: Request, res: Response): Promise<void
       return;
     }
 
-    const leadRecord = {
-      id: crypto.randomUUID(),
+    let recordId: string = crypto.randomUUID();
+
+    const leadRecord: Record<string, any> = {
+      id: recordId,
       name: validData.name,
       organization: validData.organization,
       email: validData.email,
@@ -190,21 +187,19 @@ app.post('/api/college-leads', async (req: Request, res: Response): Promise<void
       created_at: new Date().toISOString(),
     };
 
-    const supabase = getDbClient();
-    if (supabase) {
-      const { error } = await supabase.from('college_leads').insert([leadRecord]);
-      if (error) {
-        console.warn('Supabase insert warning, falling back to memory store:', error.message);
-        inMemoryStore.collegeLeads.push(leadRecord);
-      }
-    } else {
+    try {
+      const docId = await saveCollegeLeadToFirestore(leadRecord);
+      recordId = docId;
+      leadRecord.id = docId;
+    } catch (dbErr: any) {
+      console.warn('Firestore write notice (using fallback):', dbErr?.message);
       inMemoryStore.collegeLeads.push(leadRecord);
     }
 
     res.status(201).json({
       success: true,
       message: "Thanks! We'll be in touch.",
-      data: { id: leadRecord.id },
+      data: { id: recordId },
     });
   } catch (err: any) {
     console.error('Error in /api/college-leads:', err);

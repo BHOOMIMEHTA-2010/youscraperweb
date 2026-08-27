@@ -14,13 +14,13 @@ export const ImpactSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#D4A574] text-xs font-semibold uppercase tracking-wider mb-4 border border-white/10">
             <HeartHandshake className="w-3.5 h-3.5" />
-            The Circular Lifecycle
+            The Circular Economy
           </div>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-5">
-            Every device has another story.
+            Every material has another life.
           </h2>
           <p className="text-base sm:text-lg text-emerald-100/80 font-normal leading-relaxed">
-            When hardware reaches the end of its first ownership cycle, it shouldn't end up in an incinerator or an unorganized landfill. Here is how YourScraper creates ongoing value.
+            When plastics, paper, cardboard, glass, metals, electronics, or textiles reach the end of their first use, they shouldn't end up in an incinerator or landfill. Here is how YourScraper creates ongoing circular value.
           </p>
         </div>
 
@@ -34,14 +34,14 @@ export const ImpactSection: React.FC = () => {
                 <Compass className="w-6 h-6" />
               </div>
               <h3 className="font-heading font-bold text-xl text-white mb-3">
-                Keep electronics in circulation longer
+                Keep useful materials in circulation.
               </h3>
               <p className="text-sm text-emerald-100/70 leading-relaxed mb-6">
-                Many devices only need simple modular repairs, battery replacements, or cleaning before finding a new home with students, remote workers, or secondary markets.
+                Extend the functional life of products, components, and raw materials by routing them to secondary markets, refurbishers, and authorized remanufacturers.
               </p>
             </div>
             <div className="pt-4 border-t border-white/10 text-xs font-medium text-[#D4A574]">
-              Extending hardware utility
+              Extending material utility
             </div>
           </div>
 
@@ -52,14 +52,14 @@ export const ImpactSection: React.FC = () => {
                 <Layers className="w-6 h-6" />
               </div>
               <h3 className="font-heading font-bold text-xl text-white mb-3">
-                Recover valuable, finite materials
+                Recover value from what would otherwise be wasted.
               </h3>
               <p className="text-sm text-emerald-100/70 leading-relaxed mb-6">
-                Printed circuit boards contain copper, silver, and gold. Diverting them to certified metallurgical refiners reduces the demand for invasive open-pit virgin mining.
+                Extract high-grade polymers, recycled paper pulp, metals, and minerals. Diverting scrap to vetted processors minimizes virgin extraction and lowers carbon footprint.
               </p>
             </div>
             <div className="pt-4 border-t border-white/10 text-xs font-medium text-[#58C28A]">
-              Essential mineral conservation
+              Resource conservation
             </div>
           </div>
 
@@ -70,10 +70,10 @@ export const ImpactSection: React.FC = () => {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="font-heading font-bold text-xl text-white mb-3">
-                Make responsible disposal effortless
+                Make responsible recycling easier.
               </h3>
               <p className="text-sm text-emerald-100/70 leading-relaxed mb-6">
-                By offering honest valuations and free scheduled doorstep pickup, we eliminate the friction that keeps scrap sitting forgotten in household drawers.
+                By offering transparent multi-material valuations and free scheduled doorstep pickup, we eliminate the friction that keeps scrap sitting forgotten in storage.
               </p>
             </div>
             <div className="pt-4 border-t border-white/10 text-xs font-medium text-[#D4A574]">

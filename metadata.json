@@ -1,6 +1,6 @@
 {
   "name": "YourScraper",
-  "description": "Turn Trash Into Treasure — Responsible e-waste collection, valuation, and circular-economy platform connecting sellers, bulk collectors, and organizations.",
+  "description": "Turn Trash Into Treasure — India's all-in-one circular recycling and material recovery platform connecting households, businesses, collectors, and institutions across all recyclable materials.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -6,7 +6,7 @@ export const TrustStrip: React.FC = () => {
     {
       icon: DollarSign,
       title: 'Fair Value',
-      desc: 'Transparent valuation based on honest assessment of device specs & condition.',
+      desc: 'Transparent valuation based on honest assessment of scrap, items & material specs.',
     },
     {
       icon: Truck,
@@ -16,12 +16,12 @@ export const TrustStrip: React.FC = () => {
     {
       icon: Recycle,
       title: 'Responsible Recycling',
-      desc: 'Ensuring zero toxic e-waste enters open landfills through vetted partners.',
+      desc: 'Ensuring zero toxic scrap or recyclable waste enters open landfills through vetted partners.',
     },
     {
       icon: Repeat,
       title: 'Circular Future',
-      desc: 'Reviving components and materials to extend the global electronics lifecycle.',
+      desc: 'Reviving materials, metals, polymers and resources to extend the global circular lifecycle.',
     },
   ];
 
