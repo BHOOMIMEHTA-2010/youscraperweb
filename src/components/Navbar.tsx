@@ -11,13 +11,26 @@ import {
   ChevronDown,
   Sparkles,
   ShieldCheck,
+  HelpCircle,
+  Truck,
+  Building2,
+  Recycle,
+  Clock,
+  HeartHandshake,
+  Layers,
+  CheckCircle2,
+  DollarSign,
+  Phone,
+  Info,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [moreDropdownOpen, setMoreDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const moreDropdownRef = useRef<HTMLDivElement>(null);
 
   const { user, profile, openAuthModal, openBookingsModal, logOut } = useAuth();
 
@@ -29,28 +42,81 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setUserDropdownOpen(false);
+      }
+      if (moreDropdownRef.current && !moreDropdownRef.current.contains(event.target as Node)) {
+        setMoreDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const navLinks = [
+  const primaryNavLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'Recycling', href: '#solution' },
-    { name: 'Materials', href: '#problem' },
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Collectors', href: '#collectors' },
-    { name: 'Institutions', href: '#colleges' },
+    { name: 'About', href: '#about' },
+    { name: 'Scrap Rates', href: '#sellers' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
+  const moreNavLinks = [
+    {
+      name: 'How It Works',
+      href: '#how-it-works',
+      desc: '3-step simple doorstep recycling & appraisal process',
+      icon: CheckCircle2,
+    },
+    {
+      name: 'Recycling Solutions',
+      href: '#solution',
+      desc: 'Sellers, collectors, and institutional recovery',
+      icon: Recycle,
+    },
+    {
+      name: 'Materials & Scrap Types',
+      href: '#problem',
+      desc: 'Plastics, metals, paper, e-waste, glass & textiles',
+      icon: Layers,
+    },
+    {
+      name: 'Collectors & Recyclers',
+      href: '#collectors',
+      desc: 'B2B supply network for licensed scrap aggregators',
+      icon: Truck,
+    },
+    {
+      name: 'Campus & Institutions',
+      href: '#colleges',
+      desc: 'Corporate & university recycling drives',
+      icon: Building2,
+    },
+    {
+      name: 'Future Roadmap',
+      href: '#roadmap',
+      desc: 'Upcoming AI valuation, photo grading & marketplace',
+      icon: Clock,
+    },
+    {
+      name: 'Circular Impact',
+      href: '#impact',
+      desc: 'Resource recovery & environmental stewardship',
+      icon: HeartHandshake,
+    },
+    {
+      name: 'FAQs',
+      href: '#faq',
+      desc: 'Common questions about valuation, pickup & items',
+      icon: HelpCircle,
+    },
   ];
 
   const handleLinkClick = (href: string) => {
     setMobileMenuOpen(false);
+    setMoreDropdownOpen(false);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -95,8 +161,8 @@ export const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7" aria-label="Main Navigation">
-            {navLinks.map((link) => (
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main Navigation">
+            {primaryNavLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -104,7 +170,7 @@ export const Navbar: React.FC = () => {
                   e.preventDefault();
                   handleLinkClick(link.href);
                 }}
-                className={`text-sm font-semibold transition-colors duration-200 ${
+                className={`text-sm font-semibold transition-colors duration-200 cursor-pointer ${
                   isScrolled
                     ? 'text-emerald-100/90 hover:text-[#D4A574]'
                     : 'text-[#2D4036] hover:text-[#1A5C3A]'
@@ -113,6 +179,72 @@ export const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
+
+            {/* "More" Dropdown Menu */}
+            <div className="relative" ref={moreDropdownRef}>
+              <button
+                type="button"
+                onClick={() => setMoreDropdownOpen(!moreDropdownOpen)}
+                onMouseEnter={() => setMoreDropdownOpen(true)}
+                className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors duration-200 cursor-pointer py-1 ${
+                  isScrolled
+                    ? 'text-emerald-100/90 hover:text-[#D4A574]'
+                    : 'text-[#2D4036] hover:text-[#1A5C3A]'
+                }`}
+                aria-expanded={moreDropdownOpen}
+              >
+                <span>More</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    moreDropdownOpen ? 'rotate-180 text-[#D4A574]' : ''
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Panel */}
+              {moreDropdownOpen && (
+                <div
+                  onMouseLeave={() => setMoreDropdownOpen(false)}
+                  className="absolute left-1/2 -translate-x-1/2 mt-2 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-[#1A5C3A]/15 p-3 text-[#17201B] animate-in fade-in zoom-in-95 duration-150 z-50"
+                >
+                  <div className="px-3 py-1.5 mb-1 border-b border-[#1A5C3A]/10 flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#1A5C3A]">
+                      Explore All Sections
+                    </span>
+                    <span className="text-[10px] text-[#56685E]">8 features</span>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-1 max-h-[380px] overflow-y-auto pr-1">
+                    {moreNavLinks.map((item) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleLinkClick(item.href);
+                          }}
+                          className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-[#F7F5EF] transition-colors group cursor-pointer"
+                        >
+                          <div className="p-2 rounded-lg bg-[#1A5C3A]/10 text-[#1A5C3A] group-hover:bg-[#1A5C3A] group-hover:text-white transition-colors shrink-0 mt-0.5">
+                            <IconComponent className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <p className="text-xs font-bold text-[#17201B] group-hover:text-[#1A5C3A] transition-colors leading-tight">
+                              {item.name}
+                            </p>
+                            <p className="text-[11px] text-[#56685E] leading-normal line-clamp-1">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Right Action Cluster */}
@@ -322,8 +454,8 @@ export const Navbar: React.FC = () => {
             </div>
           )}
 
-          <div className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
+          <div className="flex flex-col space-y-2">
+            {primaryNavLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -331,11 +463,35 @@ export const Navbar: React.FC = () => {
                   e.preventDefault();
                   handleLinkClick(link.href);
                 }}
-                className="text-base font-medium text-white/90 hover:text-[#D4A574] py-2 border-b border-white/5 transition-colors"
+                className="text-base font-semibold text-white hover:text-[#D4A574] py-2 border-b border-white/10 transition-colors"
               >
                 {link.name}
               </a>
             ))}
+
+            {/* Mobile More Sections Accordion */}
+            <div className="pt-2 pb-1">
+              <p className="text-xs font-bold uppercase tracking-wider text-[#D4A574] mb-2 px-1">
+                More Sections
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {moreNavLinks.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleLinkClick(item.href);
+                    }}
+                    className="p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-xs font-medium text-emerald-100/90 hover:text-white transition-colors border border-white/5 flex items-center gap-2"
+                  >
+                    <item.icon className="w-3.5 h-3.5 text-[#D4A574] shrink-0" />
+                    <span className="truncate">{item.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
             <div className="pt-2">
               <a
                 href="#sellers"

@@ -3,7 +3,7 @@ import { HeartHandshake, Layers, Sparkles, Compass, ShieldCheck } from 'lucide-r
 
 export const ImpactSection: React.FC = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#17201B] text-white relative overflow-hidden">
+    <section id="impact" className="py-20 lg:py-28 bg-[#17201B] text-white relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#1A5C3A]/30 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4A574]/10 blur-3xl pointer-events-none" />

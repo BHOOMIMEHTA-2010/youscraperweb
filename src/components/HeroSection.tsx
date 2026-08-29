@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeroIllustration } from './HeroIllustration';
 import { OfficialLogoEmblem } from './Logo';
 import { ArrowRight, Sparkles, ShieldCheck, RefreshCw, Truck, Award, CheckCircle2 } from 'lucide-react';
 
@@ -36,19 +35,13 @@ export const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Typography & Action Flow */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left">
+          <div className="lg:col-span-12 max-w-3xl mx-auto flex flex-col items-center text-center">
             
-            {/* Top Pilot Badge with Official Logo Seal */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#1A5C3A]/10 border border-[#1A5C3A]/20 text-[#1A5C3A] text-xs font-bold mb-6 shadow-sm">
-              <OfficialLogoEmblem size={22} className="flex-shrink-0" />
-              <span>India's All-In-One Recyclable Materials & Circular Recovery Network</span>
-            </div>
-
             {/* Main Headline */}
             <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[3.65rem] xl:text-7xl tracking-tight leading-[1.08] mb-5 text-[#17201B]">
-              Turn Trash Into <br />
+              Scrap se Pareshan? <br />
               <span className="text-[#1A5C3A] relative inline-block">
-                Treasure.
+                YourScraper hai na!!
                 {/* Organic botanical underline accent */}
                 <svg
                   className="absolute -bottom-2.5 left-0 w-full h-3 text-[#D4A574]"
@@ -77,7 +70,7 @@ export const HeroSection: React.FC = () => {
             </p>
 
             {/* Material categories highlight bar */}
-            <div className="flex flex-wrap items-center gap-2 mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
               {['Plastic', 'Paper', 'Cardboard', 'Glass', 'Metal', 'E-Waste', 'Textiles'].map((cat) => (
                 <span
                   key={cat}
@@ -92,7 +85,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Dual CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto mb-8">
               <button
                 onClick={() => scrollTo('#sellers')}
                 id="hero-sell-cta"
@@ -113,7 +106,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Micro Trust Checkmarks */}
-            <div className="flex flex-wrap items-center gap-y-2 gap-x-5 text-xs font-semibold text-[#56685E]">
+            <div className="flex flex-wrap items-center justify-center gap-y-2 gap-x-5 text-xs font-semibold text-[#56685E]">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#1A5C3A]" />
                 <span>Zero Fake Estimates</span>
@@ -128,11 +121,6 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
 
-          </div>
-
-          {/* Right Column: Custom Vector Eco-Recycling Illustration */}
-          <div className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center">
-            <HeroIllustration />
           </div>
 
         </div>

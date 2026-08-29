@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#0e2c1c] text-white border-t border-[#D4A574]/20 pt-16 pb-12 relative overflow-hidden">
+    <footer id="contact" className="bg-[#0e2c1c] text-white border-t border-[#D4A574]/20 pt-16 pb-12 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-[#1A5C3A]/20 blur-3xl pointer-events-none" />
 

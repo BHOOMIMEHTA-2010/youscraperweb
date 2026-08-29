@@ -56,7 +56,7 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F7F5EF] relative overflow-hidden text-[#17201B]">
+    <section id="faq" className="py-20 lg:py-28 bg-[#F7F5EF] relative overflow-hidden text-[#17201B]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
