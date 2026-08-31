@@ -16,7 +16,7 @@ export const TrustStrip: React.FC = () => {
     {
       icon: Recycle,
       title: 'Responsible Recycling',
-      desc: 'Ensuring zero toxic scrap or recyclable waste enters open landfills through vetted partners.',
+      desc: 'Ensure your scrap gets routed to genuine recyclers, not landfills.',
     },
     {
       icon: Repeat,

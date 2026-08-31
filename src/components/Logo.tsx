@@ -300,7 +300,7 @@ export const Logo: React.FC<LogoProps> = ({
               isLight ? 'text-white' : 'text-[#17201B]'
             }`}
           >
-            Your<span className="text-[#D4A574]">Scraper</span>
+            Your<span className={isLight ? 'text-[#C9D8B6]' : 'text-[#1A5C3A]'}>Scraper</span>
           </span>
           {showTagline && (
             <span

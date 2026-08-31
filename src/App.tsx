@@ -3,13 +3,11 @@ import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { TrustStrip } from './components/TrustStrip';
-import { ProblemSection } from './components/ProblemSection';
 import { SolutionSection } from './components/SolutionSection';
 import { HowItWorks } from './components/HowItWorks';
 import { SellerLeadForm } from './components/SellerLeadForm';
 import { CollectorSection } from './components/CollectorSection';
 import { CollegeSection } from './components/CollegeSection';
-import { ComingSoonRoadmap } from './components/ComingSoonRoadmap';
 import { ImpactSection } from './components/ImpactSection';
 import { AboutSection } from './components/AboutSection';
 import { FAQSection } from './components/FAQSection';
@@ -33,41 +31,35 @@ export default function App() {
           {/* 3. Value & Trust Strip */}
           <TrustStrip />
 
-          {/* 4. Problem Definition */}
-          <ProblemSection />
-
-          {/* 5. Solution Pillars */}
+          {/* 4. Solution Pillars */}
           <SolutionSection />
 
-          {/* 6. How It Works */}
+          {/* 5. How It Works */}
           <HowItWorks />
 
-          {/* 7. Seller Lead / Booking Form */}
+          {/* 6. Seller Lead / Booking Form */}
           <SellerLeadForm />
 
-          {/* 8. Collector & Recycler Network */}
+          {/* 7. Collector & Recycler Network */}
           <CollectorSection />
 
-          {/* 9. College / Organization B2B Section */}
+          {/* 8. College / Organization B2B Section */}
           <CollegeSection />
 
-          {/* 10. Coming Soon Roadmap */}
-          <ComingSoonRoadmap />
-
-          {/* 11. Circular Impact & Materials */}
+          {/* 9. Circular Impact & Materials */}
           <ImpactSection />
 
-          {/* 12. About YourScraper Mission */}
+          {/* 10. About YourScraper Mission */}
           <AboutSection />
 
-          {/* 13. FAQ Accordion */}
+          {/* 11. FAQ Accordion */}
           <FAQSection />
 
-          {/* 14. Final Conversion CTA */}
+          {/* 12. Final Conversion CTA */}
           <FinalCTA />
         </main>
 
-        {/* 15. Footer */}
+        {/* 13. Footer */}
         <Footer />
 
         {/* Dynamic Modals */}

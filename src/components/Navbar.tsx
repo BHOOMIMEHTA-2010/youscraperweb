@@ -58,8 +58,8 @@ export const Navbar: React.FC = () => {
 
   const primaryNavLinks = [
     { name: 'Home', href: '#hero' },
-    { name: 'About', href: '#about' },
     { name: 'Scrap Rates', href: '#sellers' },
+    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -77,12 +77,6 @@ export const Navbar: React.FC = () => {
       icon: Recycle,
     },
     {
-      name: 'Materials & Scrap Types',
-      href: '#problem',
-      desc: 'Plastics, metals, paper, e-waste, glass & textiles',
-      icon: Layers,
-    },
-    {
       name: 'Collectors & Recyclers',
       href: '#collectors',
       desc: 'B2B supply network for licensed scrap aggregators',
@@ -93,12 +87,6 @@ export const Navbar: React.FC = () => {
       href: '#colleges',
       desc: 'Corporate & university recycling drives',
       icon: Building2,
-    },
-    {
-      name: 'Future Roadmap',
-      href: '#roadmap',
-      desc: 'Upcoming AI valuation, photo grading & marketplace',
-      icon: Clock,
     },
     {
       name: 'Circular Impact',
@@ -211,7 +199,7 @@ export const Navbar: React.FC = () => {
                     <span className="text-[11px] font-bold uppercase tracking-wider text-[#1A5C3A]">
                       Explore All Sections
                     </span>
-                    <span className="text-[10px] text-[#56685E]">8 features</span>
+                    <span className="text-[10px] text-[#56685E]">{moreNavLinks.length} sections</span>
                   </div>
 
                   <div className="grid grid-cols-1 gap-1 max-h-[380px] overflow-y-auto pr-1">
@@ -352,7 +340,7 @@ export const Navbar: React.FC = () => {
               </div>
             )}
 
-            {/* Get Valued Primary CTA */}
+            {/* Sell It Primary CTA */}
             <a
               href="#sellers"
               onClick={(e) => {
@@ -360,10 +348,10 @@ export const Navbar: React.FC = () => {
                 handleLinkClick('#sellers');
               }}
               id="nav-cta-button"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#D4A574] hover:bg-[#c49360] text-[#17201B] font-bold text-xs transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#1A5C3A] hover:bg-[#14472D] text-white font-bold text-xs transition-all duration-200 shadow-md hover:shadow-lg hover:scale-105 border border-[#1A5C3A]/20"
             >
-              <span>Get Valued</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#17201B]" />
+              <span>Sell It</span>
+              <ArrowRight className="w-3.5 h-3.5 text-white" />
             </a>
           </div>
 
@@ -499,10 +487,10 @@ export const Navbar: React.FC = () => {
                   e.preventDefault();
                   handleLinkClick('#sellers');
                 }}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#D4A574] text-[#17201B] font-semibold text-sm shadow-md"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#1A5C3A] hover:bg-[#14472D] text-white font-semibold text-sm shadow-md"
               >
-                <span>Get Materials Valued</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Sell It</span>
+                <ArrowRight className="w-4 h-4 text-white" />
               </a>
             </div>
           </div>

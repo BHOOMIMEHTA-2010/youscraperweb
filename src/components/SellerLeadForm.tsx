@@ -497,8 +497,33 @@ export const SellerLeadForm: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Additional Details */}
+                  {/* Additional Details & Quick Weight Selector */}
                   <div className="sm:col-span-2">
+                    <label className="block text-xs font-semibold text-[#17201B] mb-2">
+                      Approximate Volume / Weight (Optional)
+                    </label>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {['< 10 kg', '10 – 50 kg', '50 – 200 kg', '200+ kg / Bulk Batch', 'Single Item'].map((qty) => (
+                        <button
+                          key={qty}
+                          type="button"
+                          onClick={() => {
+                            setFormData((prev) => ({
+                              ...prev,
+                              additional_details: prev.additional_details
+                                ? prev.additional_details.includes(qty)
+                                  ? prev.additional_details
+                                  : `${prev.additional_details}, Est. Qty: ${qty}`
+                                : `Est. Qty: ${qty}`,
+                            }));
+                          }}
+                          className="px-3 py-1.5 rounded-lg bg-white border border-[#1A5C3A]/20 text-xs font-semibold text-[#1A5C3A] hover:bg-[#1A5C3A] hover:text-white transition-all cursor-pointer shadow-2xs"
+                        >
+                          + {qty}
+                        </button>
+                      ))}
+                    </div>
+
                     <label htmlFor="additional_details" className="block text-xs font-semibold text-[#17201B] mb-1">
                       Additional Details (Optional)
                     </label>
